@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+//Suppliers
+Route::get('/suppliers', 'SupplierController@view');
+Route::post('/suppliers', 'SupplierController@create');
+Route::delete('/suppliers/{id}', 'SupplierController@destroy');
+Route::patch('/suppliers/{id}', 'SupplierController@update');
